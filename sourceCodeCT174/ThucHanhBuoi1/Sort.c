@@ -41,7 +41,7 @@ void SelectionSort(recordtype a[], int n){
 void InsertionSort( recordtype a[], int n){
 	int i, j;
 	
-	for( i=0; i<=n-1; i++)
+	for( i=1; i<=n-1; i++)
 		for (j=i; (j>=1 && a[j].key < a[j-1].key); j-- )
 			Swap(&a[j], &a[j-1]);
 }
