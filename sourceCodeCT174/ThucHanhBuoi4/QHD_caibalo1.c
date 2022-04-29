@@ -30,7 +30,7 @@ DoVat * ReadFromFile(int *W, int *n){
 	   
 	   dsdv[i].PA=0;
 	   i++;
-	   dsdv=(DoVat*)realloc(dsdv, sizeof(DoVat)*(i+1));  
+	//   dsdv=(DoVat*)realloc(dsdv, sizeof(DoVat)*(i+1));  
 	 }
 	 *n=i;
      fclose(f);
