@@ -38,7 +38,7 @@ DoVat * ReadFromFile( float *W, int *n){
 		dsdv[i].DG = dsdv[i].GT / dsdv[i].TL;
 		dsdv[i].So_DV_Duoc_Chon = 0;
 		i++;
-		dsdv = realloc(dsdv, sizeof(DoVat)*(i+1)); 
+		//dsdv = realloc(dsdv, sizeof(DoVat)*(i+1)); 
 		// c++ thi dung realloc(dsdv, sizeof(DoVat)*(i+1)
 	}
 	*n=i; 	//so luong do vat
