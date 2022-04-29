@@ -16,7 +16,7 @@
 typedef struct{
 	char TenDV[20];
 	float TL, GT, DG;
-	int So_DV_Duoc_Chon;
+	int So_DV_Duoc_Chon;  // neu la cai ba lo 2 thi them truong SL, con cai balo 3 khoi
 } DoVat;
 
 void Swap(DoVat *X, DoVat*Y){
@@ -55,7 +55,7 @@ void BubbleSort(DoVat *dsdv, int n){
 		}
 }
 
-void InDSDV( DoVat *dsdv, int n, float W){
+void InDSDV( DoVat *dsdv, int n, float W){ //in them truong SL kieu int
 	int i;
 	float TongTL = 0.0, TongGT = 0.0;
 	printf("\nPhuong an thu duoc tu ky thuat THAM AN nhu sau: \n");
