@@ -75,7 +75,13 @@ void InDSDV( DoVat *dsdv, int n, float W){
 void Greedy(DoVat *dsdv, int n, float W){
 	int i;
 	for( i=0; i<n; i++){
-		dsdv[i].So_DV_Duoc_Chon = ( W / dsdv[i].TL );
+		
+		dsdv[i].So_DV_Duoc_Chon = ( W / dsdv[i].TL ); //cai ba lo 1. khong gioi han so luong
+		
+	//	dsdv[i].So_DV_Duoc_Chon= min(1, W/dsdv[i].TL); //CaiBaLo3. cho 1 do vat duy nhat
+		
+	//	dsdv[i].So_DV_Duoc_Chon= min(dsdv[i].SL, W/dsdv[i].TL); cai ba lo 2. so luong do vat gioi han
+		
 		W = W - dsdv[i].So_DV_Duoc_Chon * dsdv[i].TL;
 	}
 }
