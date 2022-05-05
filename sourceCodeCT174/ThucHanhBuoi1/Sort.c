@@ -41,11 +41,14 @@ void SelectionSort(recordtype a[], int n){
 void InsertionSort( recordtype a[], int n){
 	int i, j;
 	
-	for( i=1; i<=n-1; i++)
-		for (j=i; (j>=1 && a[j].key < a[j-1].key); j-- )
+	for( i=1; i<=n-1; i++){
+		j=i;
+		while((j>0 && a[j].key < a[j-1].key) ){
 			Swap(&a[j], &a[j-1]);
+			j-- ;	
+		}	
+	} 
 }
-
 //sap xep noi bot
 void BubbleSort( recordtype a[], int n) {
 	int i, j;
