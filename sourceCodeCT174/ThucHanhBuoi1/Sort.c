@@ -65,6 +65,7 @@ int FindPivot(recordtype a[], int i, int j){
 	while (k <= j && a[k].key == firstkey ) k++;
 	if( k>j ) return -1;
 	if( a[k].key > firstkey) return k;
+	// bien the <
 	return i;
 }
 //ham phan hoach Partition
@@ -73,8 +74,10 @@ int Partition(recordtype a[], int i, int j, keytype pivot){
 	L = i;
 	R = j;
 	while ( L<=R ){
+		 //bien the  <= 
 		while (a[L].key < pivot) L++;
 		while (a[R].key >= pivot) R--;
+		  //bien the  >
 		if( L<R ) Swap (&a[L],&a[R]);
 	}
 	return L;	//tra ve diem phan hoach
@@ -91,7 +94,6 @@ void QuickSort(recordtype a[], int i, int j){
 		QuickSort(a,k,j);
 	}
 }
-
 	//sap xep vun dong HeapSort
 //ham PushDown
 void PushDown(recordtype a[], int first, int last){
