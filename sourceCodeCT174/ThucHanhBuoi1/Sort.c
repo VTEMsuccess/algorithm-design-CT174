@@ -61,10 +61,8 @@ void BubbleSort( recordtype a[], int n) {
 	//sap xep nhanh QuickSort
 //ham tim chot
 int FindPivot(recordtype a[], int i, int j){
-	keytype firstkey;
-	int k;
-	k = i+1;
-	firstkey = a[i].key;
+	keytype firstkey = a[i].key;
+	int k = i+1;
 	while (k <= j && a[k].key == firstkey ) k++;
 	if( k>j ) return -1;
 	if( a[k].key > firstkey) return k;
